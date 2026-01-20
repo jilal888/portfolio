@@ -1,0 +1,1544 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Saya - Jilal Amrurijal</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Tentang Jilal Amrurijal - Mahasiswa Sistem Informasi ITB AD Jakarta dengan spesialisasi Web Development dan Data Mining">
+    <meta name="keywords" content="Jilal Amrurijal, Tentang, Biodata, Pendidikan, Keahlian, Pengalaman, Sistem Informasi">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/images/icons/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/about.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    
+    <!-- About Page Specific CSS -->
+    <style>
+        /* ===== ABOUT PAGE SPECIFIC STYLES ===== */
+        .about-page {
+            padding-top: 100px;
+        }
+        
+        .about-hero {
+            background: var(--gradient-dark);
+            color: var(--white);
+            padding: var(--space-xxl) 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(106, 17, 203, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(37, 117, 252, 0.15) 0%, transparent 50%);
+            z-index: 0;
+        }
+        
+        .about-hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .about-hero-title {
+            font-size: var(--font-xxxl);
+            margin-bottom: var(--space-md);
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--accent-color) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+        
+        .about-hero-subtitle {
+            font-size: var(--font-lg);
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .about-hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-xxl);
+            flex-wrap: wrap;
+            margin-top: var(--space-xl);
+        }
+        
+        .hero-stat-item {
+            text-align: center;
+        }
+        
+        .hero-stat-number {
+            font-size: var(--font-xxxl);
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: var(--space-xs);
+            display: block;
+        }
+        
+        .hero-stat-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: var(--font-md);
+            font-weight: 500;
+        }
+        
+        /* Timeline Styles */
+        .education-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding-left: var(--space-xl);
+        }
+        
+        .education-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 20px;
+            height: 100%;
+            width: 4px;
+            background: var(--gradient-primary);
+        }
+        
+        .education-item {
+            position: relative;
+            margin-bottom: var(--space-xxl);
+        }
+        
+        .education-date {
+            position: absolute;
+            left: -120px;
+            top: 0;
+            padding: var(--space-xs) var(--space-md);
+            background: var(--gradient-primary);
+            color: var(--white);
+            border-radius: var(--radius-md);
+            font-size: var(--font-sm);
+            font-weight: 600;
+            min-width: 100px;
+            text-align: center;
+        }
+        
+        .education-content {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            margin-left: var(--space-xl);
+        }
+        
+        body.dark-mode .education-content {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .education-content::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: -20px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 20px 10px 0;
+            border-color: transparent var(--white) transparent transparent;
+        }
+        
+        body.dark-mode .education-content::before {
+            border-color: transparent rgba(255, 255, 255, 0.05) transparent transparent;
+        }
+        
+        .education-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: var(--space-md);
+        }
+        
+        .education-title {
+            font-size: var(--font-lg);
+            margin-bottom: var(--space-xs);
+        }
+        
+        .education-institution {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: var(--font-md);
+        }
+        
+        .education-description {
+            color: var(--gray-color);
+            font-size: var(--font-sm);
+            margin-bottom: var(--space-md);
+            line-height: 1.6;
+        }
+        
+        body.dark-mode .education-description {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .education-icon {
+            position: absolute;
+            left: -50px;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-circle);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: var(--font-md);
+            z-index: 1;
+        }
+        
+        /* Personal Info Styles */
+        .personal-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-lg);
+        }
+        
+        .info-card-detail {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-normal);
+        }
+        
+        body.dark-mode .info-card-detail {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .info-card-detail:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .info-card-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .info-card-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-circle);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: var(--font-lg);
+        }
+        
+        .info-card-title {
+            font-size: var(--font-lg);
+            margin-bottom: var(--space-xs);
+        }
+        
+        .info-card-content {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+        }
+        
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-sm) 0;
+            border-bottom: 1px solid var(--gray-light);
+        }
+        
+        body.dark-mode .info-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .info-item:last-child {
+            border-bottom: none;
+        }
+        
+        .info-label {
+            color: var(--gray-color);
+            font-size: var(--font-sm);
+            font-weight: 500;
+        }
+        
+        body.dark-mode .info-label {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .info-value {
+            color: var(--dark-color);
+            font-size: var(--font-sm);
+            font-weight: 600;
+            text-align: right;
+        }
+        
+        body.dark-mode .info-value {
+            color: var(--white);
+        }
+        
+        /* Hobbies & Interests */
+        .hobbies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-lg);
+        }
+        
+        .hobby-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-normal);
+        }
+        
+        body.dark-mode .hobby-card {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .hobby-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .hobby-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-circle);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: var(--font-xl);
+            margin: 0 auto var(--space-md);
+            transition: var(--transition-normal);
+        }
+        
+        .hobby-card:hover .hobby-icon {
+            transform: rotate(15deg) scale(1.1);
+        }
+        
+        .hobby-title {
+            font-size: var(--font-md);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .hobby-description {
+            color: var(--gray-color);
+            font-size: var(--font-sm);
+        }
+        
+        body.dark-mode .hobby-description {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* Values & Principles */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-lg);
+        }
+        
+        .value-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        body.dark-mode .value-card {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .value-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--gradient-primary);
+            transform: scaleY(0);
+            transition: var(--transition-normal);
+            transform-origin: top;
+        }
+        
+        .value-card:hover::before {
+            transform: scaleY(1);
+        }
+        
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .value-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-circle);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: var(--font-lg);
+            margin-bottom: var(--space-md);
+        }
+        
+        .value-title {
+            font-size: var(--font-lg);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .value-description {
+            color: var(--gray-color);
+            font-size: var(--font-sm);
+            line-height: 1.6;
+        }
+        
+        body.dark-mode .value-description {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* Career Goals */
+        .goals-container {
+            background: var(--gradient-dark);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xxl);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .goals-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(106, 17, 203, 0.2) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(37, 117, 252, 0.2) 0%, transparent 40%);
+        }
+        
+        .goals-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .goals-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-xl);
+            margin-top: var(--space-xl);
+        }
+        
+        .goal-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-md);
+        }
+        
+        .goal-number {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-circle);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: var(--font-md);
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+        
+        .goal-content h4 {
+            color: var(--white);
+            margin-bottom: var(--space-xs);
+            font-size: var(--font-md);
+        }
+        
+        .goal-content p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: var(--font-sm);
+        }
+        
+        /* Back Button */
+        .back-to-portfolio {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-sm) var(--space-xl);
+            background: var(--gradient-primary);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: var(--radius-xl);
+            font-weight: 600;
+            transition: var(--transition-normal);
+            margin-top: var(--space-xl);
+        }
+        
+        .back-to-portfolio:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-primary);
+        }
+        
+        /* Responsive Styles for About Page */
+        @media (max-width: 768px) {
+            .about-hero-title {
+                font-size: var(--font-xxl);
+            }
+            
+            .about-hero-subtitle {
+                font-size: var(--font-md);
+            }
+            
+            .about-hero-stats {
+                gap: var(--space-xl);
+            }
+            
+            .hero-stat-number {
+                font-size: var(--font-xxl);
+            }
+            
+            .education-date {
+                position: relative;
+                left: 0;
+                top: 0;
+                margin-bottom: var(--space-md);
+                display: inline-block;
+            }
+            
+            .education-content {
+                margin-left: 0;
+            }
+            
+            .education-content::before {
+                display: none;
+            }
+            
+            .education-icon {
+                display: none;
+            }
+            
+            .goals-container {
+                padding: var(--space-xl);
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .about-hero-title {
+                font-size: var(--font-xl);
+            }
+            
+            .about-hero-stats {
+                flex-direction: column;
+                gap: var(--space-lg);
+            }
+            
+            .personal-info-grid,
+            .hobbies-grid,
+            .values-grid,
+            .goals-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .info-card-detail,
+            .hobby-card,
+            .value-card {
+                padding: var(--space-lg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-spinner">
+                <div class="spinner-circle"></div>
+                <div class="spinner-circle"></div>
+                <div class="spinner-circle"></div>
+            </div>
+            <div class="loader-text">
+                <span class="text-char">M</span>
+                <span class="text-char">e</span>
+                <span class="text-char">n</span>
+                <span class="text-char">g</span>
+                <span class="text-char">e</span>
+                <span class="text-char">n</span>
+                <span class="text-char">a</span>
+                <span class="text-char">l</span>
+                <span class="text-space"></span>
+                <span class="text-char">S</span>
+                <span class="text-char">a</span>
+                <span class="text-char">y</span>
+                <span class="text-char">a</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="../index.html" class="nav-logo">
+                <span class="logo-text">Jilal</span>
+                <span class="logo-dot"></span>
+            </a>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">
+                            <i class="fas fa-home nav-icon"></i>
+                            <span class="nav-text">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about-hero" class="nav-link active">
+                            <i class="fas fa-user nav-icon"></i>
+                            <span class="nav-text">Tentang</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../index.html#skills" class="nav-link">
+                            <i class="fas fa-code nav-icon"></i>
+                            <span class="nav-text">Keahlian</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../index.html#projects" class="nav-link">
+                            <i class="fas fa-briefcase nav-icon"></i>
+                            <span class="nav-text">Proyek</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../index.html#experience" class="nav-link">
+                            <i class="fas fa-graduation-cap nav-icon"></i>
+                            <span class="nav-text">Pengalaman</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../index.html#contact" class="nav-link">
+                            <i class="fas fa-envelope nav-icon"></i>
+                            <span class="nav-text">Kontak</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="nav-extra">
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                    <a href="../assets/documents/CV_Jilal_Amrurijal.pdf" class="btn-download-cv" download>
+                        <i class="fas fa-download"></i>
+                        <span>Download CV</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav-toggle" id="nav-toggle">
+                <div class="toggle-line"></div>
+                <div class="toggle-line"></div>
+                <div class="toggle-line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- About Page Content -->
+    <main class="about-page">
+        <!-- Hero Section -->
+        <section id="about-hero" class="about-hero">
+            <div class="container">
+                <div class="about-hero-content" data-aos="fade-up">
+                    <h1 class="about-hero-title">Tentang Saya</h1>
+                    <p class="about-hero-subtitle">Mahasiswa Sistem Informasi yang berfokus pada pengembangan web dan data mining dengan semangat belajar yang tinggi</p>
+                    
+                    <div class="about-hero-stats">
+                        <div class="hero-stat-item" data-aos="fade-up" data-aos-delay="100">
+                            <span class="hero-stat-number" id="aboutYears">0</span>
+                            <span class="hero-stat-label">Tahun Belajar</span>
+                        </div>
+                        <div class="hero-stat-item" data-aos="fade-up" data-aos-delay="200">
+                            <span class="hero-stat-number" id="aboutProjects">0</span>
+                            <span class="hero-stat-label">Proyek Selesai</span>
+                        </div>
+                        <div class="hero-stat-item" data-aos="fade-up" data-aos-delay="300">
+                            <span class="hero-stat-number" id="aboutSkills">0</span>
+                            <span class="hero-stat-label">Keahlian</span>
+                        </div>
+                        <div class="hero-stat-item" data-aos="fade-up" data-aos-delay="400">
+                            <span class="hero-stat-number" id="aboutOrgs">0</span>
+                            <span class="hero-stat-label">Organisasi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personal Story -->
+        <section class="section" id="personal-story">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Cerita <span class="highlight">Saya</span></h2>
+                    <p class="section-subtitle">Perjalanan saya dalam dunia teknologi informasi dan pengembangan web</p>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="story-content" data-aos="fade-up">
+                    <div class="story-text">
+                        <p>Halo! Saya <strong>Jilal Amrurijal</strong>, mahasiswa S1 Sistem Informasi di ITB AD Jakarta dengan NIM <strong>IMSI/FO/2023/V/A/093</strong>. Perjalanan saya di dunia teknologi dimulai sejak SMA, di mana saya pertama kali mengenal pemrograman dasar.</p>
+                        
+                        <p>Sebagai mahasiswa Sistem Informasi, saya memiliki ketertarikan yang besar dalam pengembangan web dan data mining. Saya percaya bahwa teknologi adalah alat yang powerful untuk memecahkan masalah dan meningkatkan efisiensi dalam berbagai aspek kehidupan.</p>
+                        
+                        <p>Meskipun masih dalam proses belajar, saya memiliki semangat yang tinggi untuk mengembangkan kemampuan teknis dan soft skills. Saya menikmati proses belajar hal baru, memecahkan masalah kompleks, dan berkolaborasi dalam tim untuk mencapai tujuan bersama.</p>
+                        
+                        <p>Visi saya adalah menjadi seorang profesional di bidang teknologi informasi yang tidak hanya ahli secara teknis, tetapi juga mampu berkontribusi positif bagi masyarakat melalui solusi teknologi yang inovatif.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Timeline -->
+        <section class="section" id="education">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Pendidikan & <span class="highlight">Perjalanan Akademik</span></h2>
+                    <p class="section-subtitle">Riwayat pendidikan dan pencapaian akademik saya</p>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="education-timeline">
+                    <!-- Education 1 -->
+                    <div class="education-item" data-aos="fade-right">
+                    
+                        <div class="education-content">
+                            <div class="education-header">
+                                <div>
+                                    <h3 class="education-title">S1 Sistem Informasi</h3>
+                                    <div class="education-institution">Institut Teknologi Dan Bisnis Ahmad Dahlan</div>
+                                </div>
+                                
+                            </div>
+                            
+                            <p class="education-description">
+                                Fokus studi pada pengembangan sistem informasi, database management, web development, dan data mining. 
+                                Mengambil mata kuliah utama seperti Pemrograman Web, Basis Data, Analisis Sistem, dan Data Mining.
+                            </p>
+                            
+                            <div class="education-highlights">
+                                <h4>Pencapaian & Aktivitas:</h4>
+                                <ul>
+                                    <li>Mengembangkan 5+ proyek web development</li>
+                                    <li>Mengikuti workshop dan seminar teknologi</li>
+                                    <li>Aktif dalam organisasi mahasiswa</li>
+                                    <li>Mempelajari framework modern seperti Laravel dan Node.js</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="education-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Education 2 -->
+                    <div class="education-item" data-aos="fade-left">
+                        
+                        <div class="education-content">
+                            <div class="education-header">
+                                <div>
+                                    <h3 class="education-title">SMK - Jurusan RPL</h3>
+                                    <div class="education-institution">SMK Muhammadiyah Pandeglang</div>
+                                </div>
+                            </div>
+                            
+                            <p class="education-description">
+                                Mempelajari dasar-dasar pemrograman, jaringan, dan pengembangan aplikasi. 
+                                Mulai terbiasa dengan logika pemrograman melalui praktik langsung di kelas dan tugas proyek.
+                            </p>
+                            
+                            <div class="education-highlights">
+                                <h4>Aktivitas & Pengalaman:</h4>
+                                <ul>
+                                    <li>Mengikuti kelas praktik pemrograman dasar</li>
+                                    <li>Belajar HTML, CSS, dan dasar JavaScript</li>
+                                    <li>Bekerja sama dalam proyek kelompok sederhana</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="education-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Education 3 -->
+                    <div class="education-item" data-aos="fade-right">
+                        
+                        <div class="education-content">
+                            <div class="education-header">
+                                <div>
+                                    <h3 class="education-title">BLK - Desain Grafis</h3>
+                                    <div class="education-institution">Balai Latihan Kerja (BLK) Jakarta</div>
+                                </div>
+                            </div>
+                            
+                            <p class="education-description">
+                                Kursus singkat yang mempelajari dasar-dasar desain grafis, termasuk penggunaan software desain, tipografi, dan tata warna. 
+                                Terbiasa membuat proyek sederhana sesuai arahan instruktur.
+                            </p>
+                            
+                            <div class="education-highlights">
+                                <h4>Aktivitas & Pengalaman:</h4>
+                                <ul>
+                                    <li>Membuat beberapa desain poster dan materi promosi sederhana</li>
+                                    <li>Belajar Adobe Photoshop dan CorelDRAW dasar</li>
+                                    <li>Bekerja sama dalam proyek kelompok di kelas</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personal Information -->
+        <section class="section" id="personal-info">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Informasi <span class="highlight">Pribadi</span></h2>
+                    <p class="section-subtitle">Detail informasi tentang latar belakang dan identitas saya</p>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="personal-info-grid">
+                    <!-- Basic Info Card -->
+                    <div class="info-card-detail" data-aos="fade-up" data-aos-delay="100">
+                        <div class="info-card-header">
+                            <div class="info-card-icon">
+                                <i class="fas fa-id-card"></i>
+                            </div>
+                            <div>
+                                <h3 class="info-card-title">Informasi Dasar</h3>
+                                <p class="info-card-subtitle">Data pribadi dan kontak</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card-content">
+                            <div class="info-item">
+                                <span class="info-label">Nama Lengkap</span>
+                                <span class="info-value">Jilal Amrurijal</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Tempat, Tanggal Lahir</span>
+                                <span class="info-value">Jakarta, 15 Juni 2002</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Jenis Kelamin</span>
+                                <span class="info-value">Laki-laki</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Status</span>
+                                <span class="info-value">Mahasiswa</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Email</span>
+                                <span class="info-value">jilal.amrurijal@example.com</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Telepon</span>
+                                <span class="info-value">+62 812 3456 7890</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Address Info Card -->
+                    <div class="info-card-detail" data-aos="fade-up" data-aos-delay="200">
+                        <div class="info-card-header">
+                            <div class="info-card-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h3 class="info-card-title">Alamat & Lokasi</h3>
+                                <p class="info-card-subtitle">Informasi tempat tinggal</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card-content">
+                            <div class="info-item">
+                                <span class="info-label">Alamat</span>
+                                <span class="info-value">Jl. Merdeka No. 123</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Kota</span>
+                                <span class="info-value">Jakarta Selatan</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Provinsi</span>
+                                <span class="info-value">DKI Jakarta</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Kode Pos</span>
+                                <span class="info-value">12190</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Negara</span>
+                                <span class="info-value">Indonesia</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Zona Waktu</span>
+                                <span class="info-value">WIB (UTC+7)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Academic Info Card -->
+                    <div class="info-card-detail" data-aos="fade-up" data-aos-delay="300">
+                        <div class="info-card-header">
+                            <div class="info-card-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <h3 class="info-card-title">Informasi Akademik</h3>
+                                <p class="info-card-subtitle">Detail pendidikan terkini</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card-content">
+                            <div class="info-item">
+                                <span class="info-label">Program Studi</span>
+                                <span class="info-value">S1 Sistem Informasi</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Universitas</span>
+                                <span class="info-value">ITB AD Jakarta</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">NIM</span>
+                                <span class="info-value">IMSI/FO/2023/V/A/093</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Tahun Masuk</span>
+                                <span class="info-value">2023</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Status Akademik</span>
+                                <span class="info-value">Aktif (Semester 5)</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">IPK Terkini</span>
+                                <span class="info-value">3.45 / 4.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Language Info Card -->
+                    <div class="info-card-detail" data-aos="fade-up" data-aos-delay="400">
+                        <div class="info-card-header">
+                            <div class="info-card-icon">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <div>
+                                <h3 class="info-card-title">Kemampuan Bahasa</h3>
+                                <p class="info-card-subtitle">Penguasaan bahasa asing</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card-content">
+                            <div class="info-item">
+                                <span class="info-label">Bahasa Indonesia</span>
+                                <span class="info-value">
+                                    <span class="language-level native">Native</span>
+                                </span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Bahasa Inggris</span>
+                                <span class="info-value">
+                                    <span class="language-level intermediate">Intermediate (B1)</span>
+                                </span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Bahasa Arab</span>
+                                <span class="info-value">
+                                    <span class="language-level basic">Basic (A2)</span>
+                                </span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Bahasa Jawa</span>
+                                <span class="info-value">
+                                    <span class="language-level conversational">Conversational</span>
+                                </span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Bahasa Pemrograman</span>
+                                <span class="info-value">
+                                    <span class="language-level advanced">Advanced</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hobbies & Interests -->
+        <section class="section" id="hobbies">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Hobi & <span class="highlight">Minat</span></h2>
+                    <p class="section-subtitle">Aktivitas yang saya nikmati di luar akademik dan profesional</p>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="hobbies-grid">
+                    <!-- Hobby 1 -->
+                    <div class="hobby-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="hobby-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="hobby-title">Coding & Development</h3>
+                        <p class="hobby-description">
+                            Menikmati proses membangun aplikasi web dan mengeksplorasi teknologi baru. 
+                            Sering mengerjakan proyek sampingan untuk mengasah kemampuan.
+                        </p>
+                    </div>
+                    
+                    <!-- Hobby 2 -->
+                    <div class="hobby-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="hobby-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3 class="hobby-title">Membaca & Belajar</h3>
+                        <p class="hobby-description">
+                            Gemar membaca buku teknologi, artikel perkembangan IT, dan dokumentasi framework. 
+                            Selalu ingin tahu tentang hal-hal baru.
+                        </p>
+                    </div>
+                    
+                    <!-- Hobby 3 -->
+                    <div class="hobby-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="hobby-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h3 class="hobby-title">Gaming</h3>
+                        <p class="hobby-description">
+                            Menikmati game strategy dan puzzle untuk melatih kemampuan problem-solving. 
+                            Juga tertarik dengan development game sederhana.
+                        </p>
+                    </div>
+                    
+                    <!-- Hobby 4 -->
+                    <div class="hobby-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="hobby-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h3 class="hobby-title">Musik</h3>
+                        <p class="hobby-description">
+                            Mendengarkan berbagai genre musik untuk relaksasi. 
+                            Tertarik mempelajari teori musik dan instrument digital.
+                        </p>
+                    </div>
+                    
+                    <!-- Hobby 5 -->
+                    <div class="hobby-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="hobby-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3 class="hobby-title">Kuliner</h3>
+                        <p class="hobby-description">
+                            Menikmati eksplorasi makanan baru dan belajar memasak. 
+                            Tertarik dengan food technology dan gastronomi digital.
+                        </p>
+                    </div>
+                    
+                    <!-- Hobby 6 -->
+                    <div class="hobby-card" data-aos="fade-up" data-aos-delay="600">
+                        <div class="hobby-icon">
+                            <i class="fas fa-hiking"></i>
+                        </div>
+                        <h3 class="hobby-title">Outdoor Activities</h3>
+                        <p class="hobby-description">
+                            Menikmati hiking, bersepeda, dan kegiatan outdoor lainnya. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values & Principles -->
+        <section class="section" id="values">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Nilai & <span class="highlight">Prinsip</span></h2>
+                    <p class="section-subtitle">Prinsip hidup dan nilai-nilai yang saya pegang dalam karir dan kehidupan</p>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="values-grid">
+                    <!-- Value 1 -->
+                    <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="value-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3 class="value-title">Continuous Learning</h3>
+                        <p class="value-description">
+                            Saya percaya bahwa belajar adalah proses seumur hidup. 
+                            Teknologi terus berkembang, dan saya berkomitmen untuk terus meng-update pengetahuan dan skill.
+                        </p>
+                    </div>
+                    
+                    <!-- Value 2 -->
+                    <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="value-title">Integrity</h3>
+                        <p class="value-description">
+                            Kejujuran dan integritas adalah fondasi dari setiap hubungan profesional. 
+                            Saya berkomitmen untuk selalu transparan dan bertanggung jawab dalam setiap pekerjaan.
+                        </p>
+                    </div>
+                    
+                    <!-- Value 3 -->
+                    <div class="value-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="value-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="value-title">Collaboration</h3>
+                        <p class="value-description">
+                            Saya percaya bahwa kolaborasi menghasilkan hasil yang lebih baik daripada bekerja sendirian. 
+                            Menghargai setiap kontribusi dan membangun lingkungan kerja yang positif.
+                        </p>
+                    </div>
+                    
+                    <!-- Value 4 -->
+                    <div class="value-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="value-title">Innovation</h3>
+                        <p class="value-description">
+                            Selalu mencari cara yang lebih baik untuk menyelesaikan masalah. 
+                            Berani berpikir out-of-the-box dan mencoba pendekatan baru.
+                        </p>
+                    </div>
+                    
+                    <!-- Value 5 -->
+                    <div class="value-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="value-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="value-title">Passion</h3>
+                        <p class="value-description">
+                            Bekerja dengan passion menghasilkan kualitas terbaik. 
+                            Saya mencintai apa yang saya lakukan dan itu tercermin dalam setiap proyek.
+                        </p>
+                    </div>
+                    
+                    <!-- Value 6 -->
+                    <div class="value-card" data-aos="fade-up" data-aos-delay="600">
+                        <div class="value-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3 class="value-title">Balance</h3>
+                        <p class="value-description">
+                            Menjaga keseimbangan antara pekerjaan, belajar, dan kehidupan pribadi. 
+                            Percaya bahwa work-life balance penting untuk produktivitas jangka panjang.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Career Goals -->
+        <section class="section" id="career-goals">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Tujuan <span class="highlight">Karir</span></h2>
+                    <p class="section-subtitle">Visi dan rencana pengembangan karir di bidang teknologi informasi</p>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="goals-container" data-aos="fade-up">
+                    <div class="goals-content">
+                        <div class="goals-intro">
+                            <p>Sebagai mahasiswa Sistem Informasi, saya memiliki roadmap karir yang jelas untuk mengembangkan kemampuan dan berkontribusi di industri teknologi. Berikut adalah tujuan karir jangka pendek dan jangka panjang saya:</p>
+                        </div>
+                        
+                        <div class="goals-list">
+                            <!-- Goal 1 -->
+                            <div class="goal-item">
+                                <div class="goal-number">1</div>
+                                <div class="goal-content">
+                                    <h4>Full Stack Developer</h4>
+                                    <p>Menguasai teknologi frontend dan backend untuk menjadi Full Stack Developer yang kompeten dalam 2 tahun ke depan.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Goal 2 -->
+                            <div class="goal-item">
+                                <div class="goal-number">2</div>
+                                <div class="goal-content">
+                                    <h4>Data Analyst Specialist</h4>
+                                    <p>Mengembangkan keahlian dalam data analysis dan visualization untuk mengambil keputusan berbasis data.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Goal 3 -->
+                            <div class="goal-item">
+                                <div class="goal-number">3</div>
+                                <div class="goal-content">
+                                    <h4>Tech Lead Position</h4>
+                                    <p>Dalam 5 tahun, bercita-cita menjadi Tech Lead yang dapat memimpin tim pengembangan software.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Goal 4 -->
+                            <div class="goal-item">
+                                <div class="goal-number">4</div>
+                                <div class="goal-content">
+                                    <h4>Open Source Contributor</h4>
+                                    <p>Berkontribusi pada proyek open source dan membangun portfolio yang kuat di komunitas developer.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Goal 5 -->
+                            <div class="goal-item">
+                                <div class="goal-number">5</div>
+                                <div class="goal-content">
+                                    <h4>Continuous Certification</h4>
+                                    <p>Mendapatkan sertifikasi profesional di bidang web development, cloud computing, dan data science.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Goal 6 -->
+                            <div class="goal-item">
+                                <div class="goal-number">6</div>
+                                <div class="goal-content">
+                                    <h4>Mentorship Role</h4>
+                                    <p>Membagikan pengetahuan dengan menjadi mentor bagi developer pemula di masa depan.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="section" id="about-cta">
+            <div class="container">
+                <div class="cta-content" data-aos="fade-up">
+                    <h2 class="cta-title">Tertarik Bekerja Sama?</h2>
+                    <p class="cta-description">
+                        Saya selalu terbuka untuk peluang magang, proyek kolaborasi, atau diskusi tentang teknologi. 
+                        Jangan ragu untuk menghubungi saya!
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="../index.html#contact" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Hubungi Saya</span>
+                        </a>
+                        <a href="../index.html#projects" class="btn btn-outline">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Lihat Proyek</span>
+                        </a>
+                        <a href="../assets/documents/CV_Jilal_Amrurijal.pdf" class="btn btn-outline" download>
+                            <i class="fas fa-download"></i>
+                            <span>Download CV</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Back to Portfolio -->
+        <section class="section" id="back-section">
+            <div class="container text-center">
+                <a href="../index.html" class="back-to-portfolio" data-aos="fade-up">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Kembali ke Halaman Utama</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <a href="../index.html" class="footer-logo">
+                        <span class="logo-text">Jilal</span>
+                        <span class="logo-dot"></span>
+                    </a>
+                    <p class="footer-description">
+                        Mahasiswa S1 Sistem Informasi dengan minat besar di bidang teknologi, 
+                        khususnya pengembangan website dan data mining.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="links-column">
+                        <h4 class="links-title">Navigasi</h4>
+                        <ul class="links-list">
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="#about-hero">Tentang</a></li>
+                            <li><a href="../index.html#skills">Keahlian</a></li>
+                            <li><a href="../index.html#projects">Proyek</a></li>
+                            <li><a href="../index.html#experience">Pengalaman</a></li>
+                            <li><a href="../index.html#contact">Kontak</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="links-column">
+                        <h4 class="links-title">Tentang Saya</h4>
+                        <ul class="links-list">
+                            <li><a href="#personal-story">Cerita Saya</a></li>
+                            <li><a href="#education">Pendidikan</a></li>
+                            <li><a href="#personal-info">Informasi Pribadi</a></li>
+                            <li><a href="#hobbies">Hobi & Minat</a></li>
+                            <li><a href="#values">Nilai & Prinsip</a></li>
+                            <li><a href="#career-goals">Tujuan Karir</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="links-column">
+                        <h4 class="links-title">Resources</h4>
+                        <ul class="links-list">
+                            <li><a href="../assets/documents/CV_Jilal_Amrurijal.pdf" download>Download CV</a></li>
+                            <li><a href="certificates.html">Sertifikasi</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="projects-detail.html">Semua Proyek</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; <span id="currentYear">2023</span> Jilal Amrurijal. All Rights Reserved.</p>
+                </div>
+                <div class="footer-extra">
+                    <a href="#" class="privacy-link">Privacy Policy</a>
+                    <a href="#" class="terms-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#about-hero" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript Files -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../assets/js/main.js"></script>
+    
+    <!-- About Page Specific JS -->
+    <script>
+        // About Page Specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 1000,
+                    once: true,
+                    offset: 100
+                });
+            }
+            
+            // Counter Animation for About Stats
+            function animateAboutCounters() {
+                const counters = [
+                    { id: 'aboutYears', target: 3 },
+                    { id: 'aboutProjects', target: 12 },
+                    { id: 'aboutSkills', target: 15 },
+                    { id: 'aboutOrgs', target: 2 }
+                ];
+                
+                counters.forEach(counter => {
+                    const element = document.getElementById(counter.id);
+                    if (element) {
+                        let current = 0;
+                        const increment = counter.target / 100;
+                        const updateCounter = () => {
+                            current += increment;
+                            if (current < counter.target) {
+                                element.textContent = Math.floor(current);
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                element.textContent = counter.target;
+                            }
+                        };
+                        updateCounter();
+                    }
+                });
+            }
+            
+            // Trigger counter animation when hero section is in view
+            const aboutHero = document.getElementById('about-hero');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateAboutCounters();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            if (aboutHero) {
+                observer.observe(aboutHero);
+            }
+            
+            // Language level styling
+            const languageLevels = document.querySelectorAll('.language-level');
+            languageLevels.forEach(level => {
+                const levelText = level.textContent.toLowerCase();
+                if (levelText.includes('native')) {
+                    level.style.background = 'var(--gradient-primary)';
+                    level.style.color = 'var(--white)';
+                } else if (levelText.includes('advanced') || levelText.includes('intermediate')) {
+                    level.style.background = 'rgba(37, 117, 252, 0.1)';
+                    level.style.color = 'var(--secondary-color)';
+                } else {
+                    level.style.background = 'rgba(255, 107, 107, 0.1)';
+                    level.style.color = 'var(--accent-color)';
+                }
+                level.style.padding = '2px 8px';
+                level.style.borderRadius = '4px';
+                level.style.fontSize = '0.75rem';
+                level.style.fontWeight = '600';
+            });
+            
+            // Mobile menu toggle
+            const navToggle = document.getElementById('nav-toggle');
+            const navMenu = document.getElementById('nav-menu');
+            
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                    navToggle.classList.toggle('active');
+                });
+                
+                // Close mobile menu when clicking on a link
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navMenu.classList.remove('active');
+                        navToggle.classList.remove('active');
+                    });
+                });
+            }
+            
+            // Theme toggle
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', () => {
+                    document.body.classList.toggle('dark-mode');
+                    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+                });
+                
+                // Check for saved theme preference
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.body.classList.add('dark-mode');
+                }
+            }
+            
+            // Back to top button
+            const backToTop = document.getElementById('backToTop');
+            if (backToTop) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 500) {
+                        backToTop.classList.add('visible');
+                    } else {
+                        backToTop.classList.remove('visible');
+                    }
+                });
+                
+                backToTop.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+            
+            // Update copyright year
+            const currentYearElement = document.getElementById('currentYear');
+            if (currentYearElement) {
+                currentYearElement.textContent = new Date().getFullYear();
+            }
+            
+            // Hide loader
+            const loader = document.getElementById('loader');
+            if (loader) {
+                setTimeout(() => {
+                    loader.classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                }, 1500);
+            }
+        });
+    </script>
+</body>
+</html>
